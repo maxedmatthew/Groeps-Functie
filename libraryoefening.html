@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="persons"></p>
+<button onclick="myFunction()">Add User</button>
+
+
+<script>
+var persoon = {
+    vNaam : "Jan",
+    aNaam  : "Kipsen",
+    Status : "Online",
+    Permissie  : "wel"
+};    //personen aanmaken voor in de libraries
+var persoon2 = {
+    vNaam : "Jantje",
+    aNaam  : "Jansen",
+    Status : "Online",
+    Permissie  : "niet"
+};     //personen aanmaken voor in de libraries
+    
+var persoon3 = { 
+    vNaam : "Stefan",
+    aNaam  : "de Vrij",
+    Status : "Offline",
+    Permissie  : "geen"
+    }; // nog niet toegevoegd persoon
+    
+
+// vanaf hier begint de Library
+    
+    var personen = [persoon, persoon2]; //array aanmaken met de personen erin
+console.log(personen);
+
+    if(persoon2.Status == "Online" && persoon.Status == "Online" ){ //checken of persoon 2 online is
+        
+        document.getElementById("persons").innerHTML =
+        persoon.vNaam + 'is momenteel online en heeft ' + persoon.Permissie +' toegang tot de omgeving <br><br>' 
+        + persoon2.vNaam + ' is momenteel online en heeft ' + persoon2.Permissie +' toegang tot de omgeving' ; 
+        
+        
+    }
+    else if (persoon.Status == "Online" && persoon2.Status == "Offline") {
+        
+        document.getElementById("persons").innerHTML =
+        persoon2.vNaam +" is helaas niet online ";
+        var persoon2 = persoon;
+        
+        '<br>'
+         }
+    
+    else{
+        
+        document.getElementById("persons").innerHTML =
+        persoon1.vNaam +" is helaas niet online ";
+        var persoon2 = persoon;
+        
+    }
+    
+function myFunction() { //wanneer je op de buton klikt voeg je een gebruiker toe
+    
+    
+    
+    personen.push(persoon3);
+   
+    document.getElementById("persons").innerHTML =
+       persoon.vNaam + 'is momenteel online en heeft ' + persoon.Permissie +' toegang tot de omgeving <br><br>' 
+        + persoon2.vNaam + ' is momenteel online en heeft ' + persoon2.Permissie +' toegang tot de omgeving' +
+        '<br><br> je hebt zojuist ' + persoon3.vNaam + persoon3.aNaam + ' toegevoegd aan de gebruikers, hij heeft ' + persoon3.Permissie + ' toestemming voor de omgeving';
+    
+}
+    
+</script>
+
+</body>
+</html>
+
