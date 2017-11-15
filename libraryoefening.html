@@ -3,48 +3,56 @@
 <body>
 
 <p id="persons"></p>
+<button onclick="changeOnline()">Geef gebruiker permissie</button>
 <button onclick="myFunction()">Add User</button>
-
+<div id="myDIV"></div>
 
 <script>
-var persoon = {
-    vNaam : "Jan",
-    aNaam  : "Kipsen",
+var personen = [
+{
+    vNaam : "Erik",
+    aNaam  : "Magspel",
     Status : "Online",
-    Permissie  : "wel"
-};    //personen aanmaken voor in de libraries
-var persoon2 = {
-    vNaam : "Jantje",
-    aNaam  : "Jansen",
+    Permissie  : "geen"
+},    //personen aanmaken voor in de libraries
+{
+    vNaam : "Willem",
+    aNaam  : "van Durnen",
     Status : "Online",
-    Permissie  : "niet"
-};     //personen aanmaken voor in de libraries
+    Permissie  : "geen"
+},     //personen aanmaken voor in de libraries
     
-var persoon3 = { 
+{ 
     vNaam : "Stefan",
     aNaam  : "de Vrij",
     Status : "Offline",
     Permissie  : "geen"
-    }; // nog niet toegevoegd persoon
+}]; // nog niet toegevoegd persoon
     
 
 // vanaf hier begint de Library
     
-    var personen = [persoon, persoon2]; //array aanmaken met de personen erin
-console.log(personen);
+//var personenarray = [persoon, persoon2]; //array aanmaken met de personen erin
+//console.log(personen);
+    
+console.log(personen[0].vNaam);
 
-    if(persoon2.Status == "Online" && persoon.Status == "Online" ){ //checken of persoon 2 online is
+
+    
+
+
+    if(personen[0].Status == "Online" && personen[1].Status == "Online" ){ //checken of persoon 2 online is
         
         document.getElementById("persons").innerHTML =
-        persoon.vNaam + 'is momenteel online en heeft ' + persoon.Permissie +' toegang tot de omgeving <br><br>' 
-        + persoon2.vNaam + ' is momenteel online en heeft ' + persoon2.Permissie +' toegang tot de omgeving' ; 
+        personen[0].vNaam + ' is momenteel online en heeft ' + personen[0].Permissie +' toegang tot de omgeving <br><br>' 
+        + personen[1].vNaam + ' is momenteel online en heeft ' + personen[1].Permissie +' toegang tot de omgeving' ; 
         
         
     }
-    else if (persoon.Status == "Online" && persoon2.Status == "Offline") {
+    else if (personen[0].Status == "Online" && personen[1].Status == "Offline") {
         
         document.getElementById("persons").innerHTML =
-        persoon2.vNaam +" is helaas niet online ";
+        personen[1].vNaam +" is helaas niet online ";
         var persoon2 = persoon;
         
         '<br>'
@@ -53,7 +61,7 @@ console.log(personen);
     else{
         
         document.getElementById("persons").innerHTML =
-        persoon1.vNaam +" is helaas niet online ";
+        personen[1].vNaam +" is helaas niet online ";
         var persoon2 = persoon;
         
     }
@@ -62,15 +70,45 @@ function myFunction() { //wanneer je op de buton klikt voeg je een gebruiker toe
     
     
     
-    personen.push(persoon3);
+   // personenarray.push(persoon3);
    
     document.getElementById("persons").innerHTML =
-       persoon.vNaam + 'is momenteel online en heeft ' + persoon.Permissie +' toegang tot de omgeving <br><br>' 
-        + persoon2.vNaam + ' is momenteel online en heeft ' + persoon2.Permissie +' toegang tot de omgeving' +
-        '<br><br> je hebt zojuist ' + persoon3.vNaam + persoon3.aNaam + ' toegevoegd aan de gebruikers, hij heeft ' + persoon3.Permissie + ' toestemming voor de omgeving';
+       personen[0].vNaam + 'is momenteel online en heeft ' + personen[0].Permissie +' toegang tot de omgeving <br><br>' 
+        + personen[1].vNaam + ' is momenteel online en heeft ' + personen[1].Permissie +' toegang tot de omgeving' +
+        '<br><br> je hebt zojuist ' + personen[2].vNaam + personen[2].aNaam + ' toegevoegd aan de gebruikers, hij heeft ' + personen[2].Permissie + ' toestemming voor de omgeving';
     
 }
+
+function changeOnline() { // toegevoegde fuctie, online
     
+   // for (var i = 0; i <= 2; i++) {
+   // console.log('Line ' + i);
+    //    if(personen[i].Permissie == 'wel'){
+            
+    //        console.log('bier'); 
+            
+    //    }     
+   // console.log(personen[i].Permissie);
+    //}
+    console.log('array klaar niifow');
+    
+    if(personen[0].Permissie == 'wel'){
+        
+        document.getElementById("persons").innerHTML =  
+        personen[0].vNaam + ' heeft ' + personen[0].Permissie + ' al permissie!'
+    }
+    else if(personen[0].Permissie == 'geen'){
+        
+         document.getElementById("persons").innerHTML = 
+        personen[0].vNaam + ' Heeft nu ' + personen[0].Permissie + ' Permissie!'
+        personen[0].Permissie = 'wel';
+        
+  
+    }
+    
+}
+
+
 </script>
 
 </body>
