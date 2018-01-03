@@ -1,73 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway" rel="stylesheet">
+    <script type="text/javascript" src="js/personenDB.js"></script>
 </head>
     
 <body>
     
-<script>
-var personen = [
-{
-    vNaam : "Erik",
-    aNaam  : "van Kampen",
-    Status : "Online",
-    Permissie  : "geen"
-},    //personen aanmaken voor in de libraries
-{
-    vNaam : "Willem",
-    aNaam  : "van Durnen",
-    Status : "Online",
-    Permissie  : "wel"
-},     //personen aanmaken voor in de libraries
+    <div class="form-style">
+        
+        <input type="text" id="newFirstname" class="form-text" placeholder="Voornaam"/> 
+        <input type="text" id="newLastname" class="form-text" placeholder="Achternaam"/> 
+        <select name="carlist" id="newPermissie" class="form-select">
+            <option value="geen">geen</option>
+            <option value="wel">wel</option>
+        </select>
+        
+        <button onclick="groepsfunctie.addPersoontoDB()" class="form-button">Voeg toe</button> 
+        
+    </div>
     
-{ 
-    vNaam : "Stefan",
-    aNaam  : "de Vrij",
-    Status : "Offline",
-    Permissie  : "wel"
-}]; // nog niet toegevoegd persoon
-
-    
-var aantalPersonen = personen.length;
-var Tabel = document.createElement("TABLE");
-document.body.appendChild(Tabel);
-var ChangePermissieBtn = document.createElement("BUTTON");
-    
-for (var i = 0; i < aantalPersonen; i++){
-    
-    // Alle rijen worden aangemaakt, aantal rijen ligt aan lengte van array.
-    var tabelrij = document.createElement("tr");
-    Tabel.appendChild(tabelrij);
-    
-    // Alle kolommen worden aangemaakt
-    var tdNaam = document.createElement("td");
-    var tdStatus = document.createElement("td");
-    var tdPermissie = document.createElement("td");
-    var tdChangePermissie = document.createElement("td");
-    
-    // Alle kolommen worden toegevoegd aan HTML
-    Tabel.appendChild(tdNaam);
-    Tabel.appendChild(tdStatus);
-    Tabel.appendChild(tdPermissie);
-    Tabel.appendChild(tdChangePermissie);
-    
-    // Alle kolommen worden gevuld met de juiste informatie
-    tdNaam.innerHTML = personen[i].vNaam + " " + personen[i].aNaam;
-    tdStatus.innerHTML = personen[i].Status;
-    tdPermissie.innerHTML = personen[i].Permissie;
-    tdChangePermissie.innerHTML = ChangePermissieBtn;
-
-    
-}
-
-    
-    
-    
-    
-    
-
-</script>
-
 </body>
+
+    <script type="text/javascript" src="js/groepsfunctie.js"></script>
+
 </html>
