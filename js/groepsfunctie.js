@@ -76,7 +76,7 @@ var groepsfunctie = (function () {
             var ChangePermissieBtn = document.createElement('BUTTON');
             ChangePermissieBtn.innerText = 'Verwijder';
             ChangePermissieBtn.onclick = function testfunctie() {
-                console.log("test");
+                alert("Deze functie werkt niet aangezien dat niet het meest belangrijke was!");
             };
 
 
@@ -154,7 +154,7 @@ var groepsfunctie = (function () {
             var ChangePermissieBtn = document.createElement('BUTTON');
             ChangePermissieBtn.innerText = 'Verwijder';
             ChangePermissieBtn.onclick = function testfunctie() {
-                alert("negers zonder teelballen");
+                alert("Deze functie werkt niet aangezien dat niet het meest belangrijke was!");
             };
 
 
