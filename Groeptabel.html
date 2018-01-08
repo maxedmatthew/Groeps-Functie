@@ -8,8 +8,8 @@
 </head>
 
 <body>
-    
-    
+
+
     <div class="form-style">
         <input type="text" id="newFirstname" class="form-text" placeholder="Voornaam" />
         <input type="text" id="newLastname" class="form-text" placeholder="Achternaam" />
@@ -25,12 +25,16 @@
 </body>
 
 
-    
-<script> 
-    
+
+<script>
+    // Het bepalen van het aantal kolommen
     var grootte = 5;
-    new groepsfunctie.KolomnaamToevoeg(grootte, 'Naam', 'Status', 'Permissie', 'Delete', 'ID', 'Reginald');
-    new groepsfunctie.addTabel(grootte);
     
+    // Het bepalen van de Kolomnamen + het toevoegen aan de webpagina
+    new groepsfunctie.KolomnaamToevoeg(grootte, 'Naam', 'Status', 'Permissie', 'Delete', 'ID', 'Extra Kolom 6');
+    
+    // Het toevoegen van de tabel aan de webpagina
+    new groepsfunctie.addTabel(grootte);
 </script>
+
 </html>
