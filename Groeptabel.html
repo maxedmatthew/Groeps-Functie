@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway" rel="stylesheet">
-    <script type="text/javascript" src="js/personenDB.js"></script>
 </head>
-    
+
 <body>
     
+    
     <div class="form-style">
-         <input type="text" id="newFirstname" class="form-text" placeholder="Voornaam"/> 
-        <input type="text" id="newLastname" class="form-text" placeholder="Achternaam"/> 
+        <input type="text" id="newFirstname" class="form-text" placeholder="Voornaam" />
+        <input type="text" id="newLastname" class="form-text" placeholder="Achternaam" />
         <select name="carlist" id="newPermissie" class="form-select">
             <option value="geen">geen</option>
             <option value="wel">wel</option>
         </select>
-        
-        <button onclick="groepsfunctie.addPersoontoDB()" class="form-button">Voeg toe</button> 
-    </div>
-        
-    
-</body>
 
+        <button onclick="groepsfunctie.addPersoontoDB()" class="form-button">Voeg toe</button>
+    </div>
     <script type="text/javascript" src="js/groepsfunctie.js"></script>
 
+</body>
+
+
+    
+<script> 
+    
+    var grootte = 5;
+    new groepsfunctie.KolomnaamToevoeg(grootte, 'Naam', 'Status', 'Permissie', 'Delete', 'ID', 'Reginald');
+    new groepsfunctie.addTabel(grootte);
+    
+</script>
 </html>
