@@ -24,7 +24,7 @@ var groepsfunctie = (function () {
 
 
         for (var i = 0; i < kolomaantal; i++) {
-            
+
             // Aanmaken van de "th" elementen, ook wel de Tabel Header
             var tdHead = document.createElement("th");
             tabelrij.appendChild(tdHead);
@@ -33,7 +33,7 @@ var groepsfunctie = (function () {
 
 
             if (i == 0) {
-                
+
                 // De tabel header met een waarde die je hebt meegegeven
                 tdHead.innerHTML = kn1;
 
@@ -49,7 +49,7 @@ var groepsfunctie = (function () {
 
                 tdHead.innerHTML = kn4;
             } else if (i == 4) {
-                
+
                 // Kijken of je een waarde hebt meegegeven, mocht dit niet zo zijn wordt hij automatisch "extra kolom" genoemd.
                 if (kn5 == undefined) {
                     tdHead.innerHTML = "Extra Kolom";
@@ -102,7 +102,7 @@ var groepsfunctie = (function () {
             tabelrij.appendChild(tdStatus);
             tabelrij.appendChild(tdPermissie);
             tabelrij.appendChild(tdChangePermissie);
-            
+
             // Als je de grootte van de tabel hoger hebt gezet dan vier, voegt hij een 'ID' kolom toe
             if (n >= 5) {
                 var tdID = document.createElement("td");
@@ -122,7 +122,7 @@ var groepsfunctie = (function () {
 
     }
 
-    
+
     // Functie die een random ID aanmaakt voor de gebruiker
     function makeid() {
 
@@ -138,12 +138,12 @@ var groepsfunctie = (function () {
 
     // Functie die ervoor zorgt dat de gebruiker ook personen kan toevoegen via een invulveld
     function addPersoontoDB() {
-        
+
         // Ophalen van de data die de gebruiker heeft ingevuld
         name = document.getElementById("newFirstname").value;
         lastname = document.getElementById("newLastname").value;
         permissie = document.getElementById("newPermissie").value;
-        
+
         // Aanmaken van de nieuwe gebruiker
         var nieuwpersoon = {
             vNaam: name,
@@ -152,10 +152,10 @@ var groepsfunctie = (function () {
             Permissie: permissie,
             test: "1E2MS"
         };
-        
+
         // Toevoegen van de gebruiker aan de 'personen'-array
         personen.push(nieuwpersoon);
- 
+
         console.log(personen);
 
 
@@ -185,7 +185,7 @@ var groepsfunctie = (function () {
             tabelrij.appendChild(tdStatus);
             tabelrij.appendChild(tdPermissie);
             tabelrij.appendChild(tdChangePermissie);
-            
+
             // Als je de grootte van de tabel hoger hebt gezet dan vier, voegt hij een 'ID' kolom toe
             if (n >= 5) {
                 var tdID = document.createElement("td");
@@ -201,7 +201,7 @@ var groepsfunctie = (function () {
 
 
         }
-        
+
         // Hier voer je de functie uit, omdat je dit alleen wilt wanneer je hem in je code hebt aangeroepen
         new addNewPerson(grootte);
 
