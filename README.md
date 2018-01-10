@@ -1,6 +1,14 @@
 # Groepsfunctie
 
-Voor mijn Semester 4 DED project heb ik een handige Library gemaakt die een Tabel voor je aanmaakt, waarbij je gemakkelijk iemand kan toevoegen!
+## Waarvoor kan je deze library gebruiken?
+
+### Wat heb ik gemaakt?
+
+Deze Library bevat een tabel waaraan je gebruikers kan toevoegen door middel van een formulier. De tabel bezit momenteel 5 kolommen, waaronder 'Naam, Status, Permissie, Delete, ID', deze kolomnamen kun je veranderen wanneer je de Library toepast, ook kun je het aantal kolommen veranderen. In deze Tabel heb je een snel overzicht van gebruikers en de daarbij horende waardes. 
+
+### Wanneer kan je deze Library toepassen?
+
+Deze Library kan handig zijn wanneer je zoekt naar een Tabel waaraan je gemakkelijk gebruikers kan toevoegen, met daarbij enkele waardes. Bijvoorbeeld voor projecten zoals een applicatie waar enkel sommige gebruikers aanpassingen mogen doorvoeren (in de App) etc. Ik persoonlijk heb deze Library geschreven voor een project, waarbij je meerdere gebruikers een foto-album kon laten beheren, de mensen met permissie zouden foto's mogen verwijderen, bewerken etc. De mensen zonder permissie konden enkel foto's maken of verwijderen.
 
 ## Hoe installeer ik de Groepsfunctie Library?
 
